@@ -1,0 +1,26 @@
+﻿@model IEnumerable<deliverysys.Models.AvailableDriverResponse>
+
+@{
+    ViewData["Title"] = "Available Drivers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Driver ID</th>
+            <th>Driver Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var driver in Model)
+        {
+            <tr>
+                <td>@driver.DriverID</td>
+                <td>@driver.DriverName</td>
+            </tr>
+        }
+    </tbody>
+</table>
